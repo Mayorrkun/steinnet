@@ -14,4 +14,8 @@ class WebController extends Controller
         return view("main.services");
     }
 
+    public function contactShow(){
+        return view("main.contact");
+    }
+
 }
