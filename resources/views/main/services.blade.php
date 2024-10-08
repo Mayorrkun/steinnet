@@ -1,7 +1,7 @@
 <x-layout>
-    <div class="w-1/2 ml-auto block mr-20">    <x-navbar>  </x-navbar>  </div>
+    <div class="flex-row flex justify-between"> <span class="ml-10 text-blue-500 text-3xl mt-6 font-bold font-sans" >EZEA RICHARD</span>    <span class="w-1/2 ml-auto mr-20"><x-navbar>  </x-navbar></span>  </div>
     <article class="group flex overflow-hidden mt-20 h-auto ">
-        <div class=" mx-auto w-2/5  rounded-2xl bg-[linear-gradient(109.6deg,_rgb(36,45,57)_11.2%,_rgb(16,37,60)_51.2%,_rgb(0,0,0)_98.6%)] shadow-inner">
+        <div class=" mx-auto w-2/5  rounded-3xl bg-[linear-gradient(109.6deg,_rgb(36,45,57)_11.2%,_rgb(16,37,60)_51.2%,_rgb(0,0,0)_98.6%)] shadow-3xl">
             <div x-data="
                 {   
                 //    the content of the carousel cards

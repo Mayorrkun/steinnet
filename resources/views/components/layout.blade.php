@@ -22,8 +22,17 @@
         }
     </style>
 </head>
-<body class="bg-black h-full">
+<body class="bg-gray-950 min-h-screen flex flex-col">
     {{$slot}}
+
+    <footer class="text-white mt-auto">
+
+        <div class=" ml-auto w-1/4 text-right font-semibold text-sm">
+             <span>&#169;</span>Mayokun laoshe-lawal 2024
+        </div>
+       
+        
+    </footer>
 
 </body>
 </html>
