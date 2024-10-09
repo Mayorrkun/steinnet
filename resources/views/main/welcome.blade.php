@@ -45,7 +45,7 @@
 
             </div>
 
-            <button class="w-1/6 h-10 text-blue-600 border border-blue-600 rounded-full hover:text-white  hover:border-white"> Hire Me </button>
+            <button onclick="location.href='/services' " class="w-1/6 h-10 text-blue-600 border border-blue-600 rounded-full hover:text-white  hover:border-white"> Hire Me </button>
 
 
         </div>
