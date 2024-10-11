@@ -3,7 +3,7 @@
      <h1 class= "ml-10 text-3xl text-white font-bold mt-4 ">Contact Me </h1>
      <main class="w-full h-full flex flex-row justify-between">
     
-        <div class="mt-5 w-1/2 h-[500px] rounded-3xl shadow-3xl pl-10 mr-auto ml-10 bg-[linear-gradient(109.6deg,_rgb(36,45,57)_11.2%,_rgb(16,37,60)_51.2%,_rgb(0,0,0)_98.6%)]">
+        <div class="mt-5 w-1/2 h-[500px]  shadow-3xl pl-10 mr-auto ml-10 bg-[linear-gradient(109.6deg,_rgb(36,45,57)_11.2%,_rgb(16,37,60)_51.2%,_rgb(0,0,0)_98.6%)]">
            
            <form action="">
                 

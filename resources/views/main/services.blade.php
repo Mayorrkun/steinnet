@@ -1,13 +1,15 @@
 <x-layout>
     <div class="flex-row flex justify-between"> <span class="ml-10 text-blue-500 text-3xl mt-6 font-bold font-sans" >EZEA RICHARD</span>    <span class="w-1/2 ml-auto mr-20"><x-navbar>  </x-navbar></span>  </div>
     <article class="group flex overflow-hidden mt-20 h-auto ">
-        <div class=" mx-auto w-full flex flex-row"  x-data="
+        <div class=" mx-auto w-full flex flex-row justify-evenly"  x-data="
         {   
         //    the content of the carousel cards
             slides: [
                 { imgSrc: '/images/python.png', imgAlt: 'image of the python logo',title:'Python Application development',Description:'I offer yadayada'
                     },
                     { imgSrc: '/images/laravel.png',imgAlt: 'image of the laravel logo',title:'Web development in Laravel',Description: 'I offer yadayada'
+                    },
+                    { imgSrc: '/images/node-js.png',imgAlt: 'image of the node logo',title:'Backend development in Node-Js',Description: 'I offer yadayada'
                     },
             ],
             currentSlideIndex: 0,
@@ -35,9 +37,10 @@
 
 
             {{-- previous slide --}}
-            <div class="opacity-50 filter blur-sm transition duration-300 h-[300px] w-1/5 mr-auto ml-10 my-auto bg-[linear-gradient(109.6deg,_rgb(36,45,57)_11.2%,_rgb(16,37,60)_51.2%,_rgb(0,0,0)_98.6%)] rounded-3xl shadow-3xl">
-                <template x-for="(slide, index) in slides" :key="index" >
-                    <div x-cloak x-show="currentSlideIndex === index-1" class="" x-transition.opacity.duration.300ms>
+            <div class="opacity-50 filter blur-sm transition duration-300 h-[400px] w-1/4 mr-auto ml-20 mt-auto bg-[linear-gradient(109.6deg,_rgb(36,45,57)_11.2%,_rgb(16,37,60)_51.2%,_rgb(0,0,0)_98.6%)] rounded-3xl shadow-3xl">
+                <div class="w-auto h-3/4 overflow-hidden">
+                    <template x-for="(slide, index) in slides" :key="index" >
+                    <div x-cloak     x-show="currentSlideIndex === (index === 0 ? 2 : index - 1)"  class="" x-transition.opacity.duration.300ms>
                         <img class="w-1/2 h-3/5 block mx-auto inset-0 object-cover text-neutral-600 dark:text-neutral-300" x-bind:src="slide.imgSrc" x-bind:alt="slide.imgAlt" />
                          {{-- CONTENT --}}
                          <div class="flex flex-col gap-4 p-6">
@@ -55,13 +58,14 @@
                         
                     </div>
                    
-                </template>
+                </template></div>
+                
                 </div>
 
             
 
 
-            <div class="mx-auto w-2/5  rounded-3xl transition duration-300  bg-[linear-gradient(109.6deg,_rgb(36,45,57)_11.2%,_rgb(16,37,60)_51.2%,_rgb(0,0,0)_98.6%)] shadow-3xl " >
+            <div class="mx-auto w-2/5 z-50  rounded-3xl transition duration-300  bg-[linear-gradient(109.6deg,_rgb(36,45,57)_11.2%,_rgb(16,37,60)_51.2%,_rgb(0,0,0)_98.6%)] shadow-3xl " >
                     
                     <!-- Previous button -->
             <button type="button" class="absolute top-1/2 left-0 transform -translate-y-1/2  flex rounded-full items-center justify-center bg-white/40 p-2 text-neutral-600 transition hover:bg-white/60 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-black active:outline-offset-0 dark:bg-neutral-950/40 dark:text-neutral-300 dark:hover:bg-neutral-950/60 dark:focus-visible:outline-white" aria-label="previous slide" x-on:click.prevent="previous()">
@@ -120,9 +124,10 @@
                 </div>
 
                 {{-- next slide --}}
-                <div class="opacity-50 filter blur-sm transition duration-300 h-[300px] w-1/5 ml-auto mr-10 my-auto bg-[linear-gradient(109.6deg,_rgb(36,45,57)_11.2%,_rgb(16,37,60)_51.2%,_rgb(0,0,0)_98.6%)] rounded-3xl shadow-3xl">
-                    <template x-for="(slide, index) in slides" :key="index" >
-                        <div x-cloak x-show="currentSlideIndex === index+1" class="" x-transition.opacity.duration.300ms>
+                <div class="opacity-50 filter blur-sm transition duration-300 h-[400px] w-1/4 ml-auto mr-20 mt-auto bg-[linear-gradient(109.6deg,_rgb(36,45,57)_11.2%,_rgb(16,37,60)_51.2%,_rgb(0,0,0)_98.6%)] rounded-3xl shadow-3xl">
+                    <div class="w-auto h-3/4 overflow-hidden">
+                         <template x-for="(slide, index) in slides" :key="index" >
+                        <div x-cloak     x-show="currentSlideIndex === (index === slides.length-1 ? 0 : index + 1)"  class="" x-transition.opacity.duration.300ms>
                             <img class="w-1/2 h-3/5 block mx-auto inset-0 object-cover text-neutral-600 dark:text-neutral-300" x-bind:src="slide.imgSrc" x-bind:alt="slide.imgAlt" />
                              {{-- CONTENT --}}
                              <div class="flex flex-col gap-4 p-6">
@@ -141,6 +146,8 @@
                         </div>
                        
                     </template>
+                    </div>
+                   
                 </div>
 
         </div>
