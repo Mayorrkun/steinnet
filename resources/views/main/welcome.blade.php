@@ -1,9 +1,10 @@
 <x-layout>
+    <div class="flex-row flex justify-between"> <span class="ml-10 text-blue-500 text-3xl mt-6 font-bold font-sans" >LAOSHE-LAWAL MAYOKUN</span>    <span class="w-1/2 ml-auto mr-20"><x-navbar>  </x-navbar></span>  </div>
+  
 
     <main class="flex flex-row justify-between h-auto">
 
         <div class="w-1/3 mr-auto ml-10">
-            <h1 class="w-10/12 text-blue-500 text-3xl mt-6 font-bold font-sans block">EZEA RICHARD </h1>
 
             {{-- insert image here --}}
            
@@ -24,10 +25,9 @@
                 }, 3000);
             }
         }" x-init="startTimer()">
-            <x-navbar>  </x-navbar>
             
             <h1 class="w-10/12  text-white text-3xl font-bold font-sans mt-36">
-                Hello my name is  <span class="text-blue-600">Richard</span>
+                Hello my name is  <span class="text-blue-600">Mayokun</span>
             </h1>
             <h2 class="w-10/12  text-white text-2xl font-bold font-sans">
                 I am a <span class="text-blue-600" x-text="name[current]" ></span><span class="cursor text-3xl font-semibold text-blue-600 animate-blink">|</span>
