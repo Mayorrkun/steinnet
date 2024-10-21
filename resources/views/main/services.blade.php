@@ -33,7 +33,7 @@
             autoSlide() {
                      setInterval(() => {this.next(); }, 3000); // 3 seconds interval
         },
-            }" {{--x-init="autoSlide()"--}}>
+            }" x-init="autoSlide()">
 
 
             {{-- previous slide --}}
